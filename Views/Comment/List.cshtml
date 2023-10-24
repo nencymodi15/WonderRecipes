@@ -1,0 +1,31 @@
+﻿@model List<Comment>
+
+@{
+    ViewData["Title"] = "Comment List";
+}
+
+<h1>Comment List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Comment ID</th>
+            <th>Recipe ID</th>
+            <th>User ID</th>
+            <th>Comment Text</th>
+            <th>Comment Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comment in Model)
+        {
+            <tr>
+                <td>@comment.CommentID</td>
+                <td>@comment.RecipeID</td>
+                <td>@comment.UserID</td>
+                <td>@comment.CommentText</td>
+                <td>@comment.CommentDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+            </tr>
+        }
+    </tbody>
+</table>
