@@ -5,6 +5,7 @@ namespace WonderRecipes.Controllers
 {
     public class RecipeCategoryController : Controller
     {
+        [Route("recipeCategory")]
         public IActionResult List()
         {
             var recipeCategories = new List<RecipeCategory>();

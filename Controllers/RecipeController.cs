@@ -5,6 +5,7 @@ namespace WonderRecipes.Controllers
 {
     public class RecipeController : Controller
     {
+        [Route("recipe")]
         public IActionResult List()
         {
             var user1 = new User { UserID = 1, Username = "Alice" };

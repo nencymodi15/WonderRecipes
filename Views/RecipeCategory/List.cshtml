@@ -1,0 +1,23 @@
+﻿@model List<RecipeCategory>
+
+<h2>Recipe Categories</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Recipe Category ID</th>
+            <th>Recipe ID</th>
+            <th>Category ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipeCategory in Model)
+        {
+            <tr>
+                <td>@recipeCategory.RecipeCategoryID</td>
+                <td>@recipeCategory.RecipeID</td>
+                <td>@recipeCategory.CategoryID</td>
+            </tr>
+        }
+    </tbody>
+</table>
