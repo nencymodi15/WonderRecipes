@@ -5,7 +5,7 @@ namespace WonderRecipes.Controllers
 {
     public class RatingController : Controller
     {
-
+        [Route("rating")]
         public IActionResult List()
         {
             var ratings = new List<Rating>();

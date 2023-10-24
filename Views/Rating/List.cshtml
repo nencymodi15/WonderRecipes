@@ -1,0 +1,27 @@
+﻿@model List<Rating>
+
+<h2>Ratings</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Rating ID</th>
+            <th>Recipe ID</th>
+            <th>User ID</th>
+            <th>Rating Value</th>
+            <th>Rating Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rating in Model)
+        {
+            <tr>
+                <td>@rating.RatingID</td>
+                <td>@rating.RecipeID</td>
+                <td>@rating.UserID</td>
+                <td>@rating.RatingValue</td>
+                <td>@rating.RatingDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+            </tr>
+        }
+    </tbody>
+</table>

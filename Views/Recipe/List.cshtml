@@ -1,0 +1,29 @@
+﻿@model List<Recipe>
+
+<h2>Recipes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Ingredients</th>
+            <th>Instructions</th>
+            <th>Creation Date</th>
+            <th>Published</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipe in Model)
+        {
+            <tr>
+                <td>@recipe.Title</td>
+                <td>@recipe.Description</td>
+                <td>@recipe.Ingredients</td>
+                <td>@recipe.Instructions</td>
+                <td>@recipe.CreationDate.ToString("yyyy-MM-dd")</td>
+                <td>@(recipe.IsPublished ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>
