@@ -5,7 +5,8 @@ namespace WonderRecipes.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult Index()
+        [Route("User")]
+        public IActionResult List()
         {
             var users = new List<User>
         {

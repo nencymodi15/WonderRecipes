@@ -5,7 +5,8 @@ namespace WonderRecipes.Controllers
 {
     public class CategoryController : Controller
     {
-        public IActionResult Index()
+        [Route("Category")]
+        public IActionResult List()
         {
             var categories = new List<Category>
         {

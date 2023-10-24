@@ -5,7 +5,8 @@ namespace WonderRecipes.Controllers
 {
     public class CommentController : Controller
     {
-        public IActionResult Index()
+        [Route("Comment")]
+        public IActionResult List()
         {
             var comments = new List<Comment>
         {
